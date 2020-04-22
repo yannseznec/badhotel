@@ -1,0 +1,36 @@
+#N canvas 1681 363 633 678 10;
+#X obj 137 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 232 257 random 40;
+#X obj 239 286 + 80;
+#X obj 239 308 * 0.01;
+#X floatatom 241 338 5 0 0 0 - - -;
+#X obj 137 228 t b b;
+#X obj 121 541 throw~ reverb;
+#X obj 277 80 r hitkid;
+#X obj 210 541 dac~;
+#X obj 187 506 *~ 0.5;
+#X obj 276 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 279 533 throw~ lightdelay;
+#X obj 265 465 ys.rj.repeat;
+#X obj 139 358 sounds_pitch gun;
+#X obj 250 400 *~ 0.15;
+#X connect 0 0 13 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 13 1;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 7 0 10 0;
+#X connect 9 0 8 0;
+#X connect 9 0 8 1;
+#X connect 9 0 6 0;
+#X connect 10 0 12 1;
+#X connect 10 0 5 0;
+#X connect 12 0 11 0;
+#X connect 12 0 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 9 0;
+#X connect 14 0 12 0;

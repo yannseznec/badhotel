@@ -1,0 +1,24 @@
+#N canvas 676 324 993 616 10;
+#X obj 48 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 147 throw~ sounds;
+#X obj 48 92 tabplay~ \$1;
+#X obj 73 279 pack s s;
+#X obj 73 223 t b b;
+#X obj 73 335 soundfiler;
+#X msg 73 307 read -resize \$1 \$2;
+#X obj 73 195 loadbang;
+#X obj 73 251 symbol ../assets/sounds/\$1.wav;
+#X obj 267 251 symbol \$1;
+#X obj 61 400 table \$1;
+#X obj 60 10 inlet;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 8 0;
+#X connect 4 1 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 1;
+#X connect 11 0 0 0;

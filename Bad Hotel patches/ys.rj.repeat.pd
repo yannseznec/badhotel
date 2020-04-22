@@ -1,0 +1,40 @@
+#N canvas 835 190 1591 1037 10;
+#X floatatom 335 183 5 0 1000 0 - - -;
+#X obj 323 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 423 276 dry 1;
+#X msg 470 284 dry 0.5;
+#X msg 532 284 dry 0;
+#X msg 423 235 feedback 0.9;
+#X obj 212 401 e_repeater repea;
+#X obj 362 158 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 272 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 330 81 t b b b b;
+#X obj 394 115 random 100;
+#X obj 370 200 loadbang;
+#X obj 529 123 random 16;
+#X msg 584 178 num \$1;
+#X obj 190 197 inlet~;
+#X obj 212 423 outlet~;
+#X obj 271 26 inlet;
+#X connect 0 0 6 1;
+#X connect 1 0 0 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 1;
+#X connect 4 0 6 1;
+#X connect 5 0 6 1;
+#X connect 6 0 15 0;
+#X connect 7 0 0 0;
+#X connect 8 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 2 12 0;
+#X connect 9 3 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 3 0;
+#X connect 11 0 5 0;
+#X connect 12 0 13 0;
+#X connect 13 0 6 1;
+#X connect 14 0 6 0;
+#X connect 16 0 8 0;

@@ -1,0 +1,18 @@
+#N canvas 657 225 706 457 10;
+#X obj 138 140 mtof;
+#X floatatom 212 109 5 0 0 2 Q - -;
+#X floatatom 138 108 5 0 0 2 freq - -;
+#X obj 61 208 e_beequad;
+#X obj 138 178 u_highpassq;
+#X obj 61 160 inlet~;
+#X obj 138 69 inlet;
+#X obj 208 61 inlet;
+#X obj 61 230 outlet~;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 0 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;

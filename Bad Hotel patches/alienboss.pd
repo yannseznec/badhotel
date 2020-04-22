@@ -1,0 +1,117 @@
+#N canvas 686 546 963 616 10;
+#X obj 103 16 r fromOF;
+#X obj 103 37 route list;
+#X obj 100 115 t b;
+#X obj 202 115 t b;
+#X obj 204 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 144 414 dac~;
+#X obj 103 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 121 147 print bosson;
+#X obj 135 280 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 81 217 1;
+#X msg 177 221 0;
+#X obj 580 114 t b;
+#X obj 529 451 dac~;
+#X obj 580 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 677 208 random 40;
+#X obj 685 248 + 80;
+#X obj 666 277 * 0.01;
+#X floatatom 658 312 5 0 0 0 - - -;
+#X obj 580 193 t b b;
+#X obj 611 229 loadbang;
+#X msg 603 271 1;
+#X obj 584 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 580 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 580 193 t b b;
+#X obj 584 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 605 428 throw~ mediumdelay;
+#X obj 442 180 t b;
+#X obj 446 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 446 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 293 147 t b;
+#X obj 297 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 297 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 126 189 r end;
+#X obj 134 310 ambientsub 7;
+#X obj 195 254 loadbang;
+#X obj 106 90 t b b;
+#X obj 58 75 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 190 18 route alien_boss_on alien_boss_kill alien_boss_shoot
+alien_boss_move;
+#X obj 777 137 shooter move 5;
+#X obj 778 107 t b;
+#X obj 778 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 777 181 dac~;
+#X obj 814 101 print alienmove;
+#X obj 546 384 *~ 0.7;
+#X msg 197 284 2;
+#X obj 156 361 *~ 1.5;
+#X obj 777 159 *~ 0.2;
+#X obj 555 332 sounds_pitch alienbossshoot;
+#X obj 387 244 sounds_pitch alienbosskill;
+#X obj 238 211 sounds_pitch alienbosson;
+#X connect 0 0 1 0;
+#X connect 1 0 37 0;
+#X connect 2 0 6 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 6 0 9 0;
+#X connect 8 0 33 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 21 0;
+#X connect 13 0 47 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 47 1;
+#X connect 18 0 13 0;
+#X connect 18 1 14 0;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 21 0 18 0;
+#X connect 23 0 22 0;
+#X connect 26 0 27 0;
+#X connect 27 0 48 0;
+#X connect 29 0 30 0;
+#X connect 30 0 49 0;
+#X connect 32 0 10 0;
+#X connect 33 0 45 0;
+#X connect 34 0 44 0;
+#X connect 35 0 2 0;
+#X connect 35 1 29 0;
+#X connect 36 0 35 0;
+#X connect 37 0 35 0;
+#X connect 37 1 3 0;
+#X connect 37 1 26 0;
+#X connect 37 2 11 0;
+#X connect 37 3 40 0;
+#X connect 38 0 46 0;
+#X connect 39 0 38 0;
+#X connect 40 0 39 0;
+#X connect 40 0 42 0;
+#X connect 43 0 12 0;
+#X connect 43 0 12 1;
+#X connect 43 0 25 0;
+#X connect 44 0 33 1;
+#X connect 45 0 5 0;
+#X connect 45 0 5 1;
+#X connect 46 0 41 0;
+#X connect 46 0 41 1;
+#X connect 47 0 43 0;
+#X connect 48 0 45 0;
+#X connect 49 0 45 0;
